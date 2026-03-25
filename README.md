@@ -14,5 +14,7 @@ VLAN segmentation and subnetting done with a focus on IP address use efficiency,
 
 Logical Map
 <img width="948" height="707" alt="Pasted image 20260325072339" src="https://github.com/user-attachments/assets/d1bc7b23-bfc2-4db1-ae9e-6eec01ddc8a7" />
+
 Building Separation
+
 <img width="648" height="415" alt="Pasted image 20260325072433" src="https://github.com/user-attachments/assets/c84aeafc-dc2e-4c59-821d-0f6c8c54b506" />
