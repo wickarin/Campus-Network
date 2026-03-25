@@ -1,6 +1,7 @@
 # Campus-Network
 Campus like network, set in a three-tier hierarchy.
-!(docs/img/Pasted image 20260325072415.png)
+<img width="948" height="707" alt="Pasted image 20260325072339" src="https://github.com/user-attachments/assets/d1bc7b23-bfc2-4db1-ae9e-6eec01ddc8a7" />
+
 
 DHCP, FTP, DNS and Web server implementations.
 Network is separated throughout three buildings: Data center, Building A, Building B.
