@@ -4,8 +4,9 @@ Subnet table for guidance
 
 ![[Pasted image 20260325071452.png]]
 
-Per VLAN:
+Per VLAN (except 50 & 99):
 ```
 int vlan VLAN
-ip helper-address VLAN-VSI-IP
+ip helper-address DHCP_SERVER_IP
 ```
+

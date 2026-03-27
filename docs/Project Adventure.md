@@ -44,11 +44,11 @@ This added redundancy between the layers requires the implementation of either S
 - [x] [[Trunk Links]]
 - [x] [[Spanning Tree]]
 - [x] [[Inter-Vlan Routing]]
-- [ ] [[DHCP config]]
-- [ ] [[Default Route & ACLs]]
+- [x] [[DHCP config]]
+- [x] [[Default Route & ACLs]]
 - [ ] [[OSPF]]
 
 ### Testing
-
+Troubleshooting for VLAN: `show run | section interface Vlan`
 
 [[Updating Layout]]
