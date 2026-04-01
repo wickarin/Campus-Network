@@ -46,9 +46,16 @@ This added redundancy between the layers requires the implementation of either S
 - [x] [[Inter-Vlan Routing]]
 - [x] [[DHCP config]]
 - [x] [[Default Route & ACLs]]
-- [ ] [[OSPF]]
+- [x] [[OSPF]]
 
 ### Testing
 Troubleshooting for VLAN: `show run | section interface Vlan`
+
+Disconnected Dist1 Switch for failover testing:
+![[Pasted image 20260330061021.png]]
+Dist 2 switch took over and resumed services as regular
+DHCP renew works in order
+Students are denied to access IT or ADMIN vlans
+Inter-vlan connectivity is working
 
 [[Updating Layout]]

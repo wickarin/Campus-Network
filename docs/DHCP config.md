@@ -10,3 +10,4 @@ int vlan VLAN
 ip helper-address DHCP_SERVER_IP
 ```
 
+DHCP server config: 192.168.11.6
