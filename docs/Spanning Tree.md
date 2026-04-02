@@ -82,6 +82,10 @@ standby 99 preempt
 `show running-config | begin interface Vlan10`
 Vlan10 - names that show on the first command
 
+Proof of load balancing:
+![[Pasted image 20260402060906.png]]
+PC0 (VLAN 30) and PC10 (VLAN 10)
+
 ### Important troubleshooting commands
 `show standby brief`
 `show spanning-tree summary`

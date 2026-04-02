@@ -58,79 +58,11 @@ ip routing
 >- standby  <0-4095> track :Priority Tracking
 >- standby version <1-2>  :HSRP version
 
-Dist 1:
-```
-int vlan 10
-ip address 192.168.10.194 255.255.255.224
-standby 10 ip 192.168.10.193
-standby 10 priority 110
-standby 10 preempt
-
-int vlan 20
-ip address 192.168.10.226 255.255.255.224
-standby 20 ip 192.168.10.225
-standby 20 priority 110
-standby 20 preempt
-
-int vlan 30
-ip address 192.168.10.2 255.255.255.128
-standby 30 ip 192.168.10.1
-standby 30 priority 110
-standby 30 preempt
-
-int vlan 40
-ip address 192.168.10.130 255.255.255.192
-standby 40 ip 192.168.10.129
-%default priority of 100, and no preempt
-
-int vlan 50
-ip address 192.168.11.2 255.255.255.240
-standby 50 ip 192.168.11.1
-%default priority of 100, and no preempt
-
-int vlan 99
-ip address 192.168.11.18 255.255.255.240
-standby 99 ip 192.168.11.17
-%default priority of 100, and no preempt
-
-```
-
-Dist 2:
-```
-int vlan 10
-ip address 192.168.10.195 255.255.255.224
-standby 10 ip 192.168.10.193
-
-int vlan 20
-ip address 192.168.10.227 255.255.255.224
-standby 20 ip 192.168.10.225
-
-int vlan 30
-ip address 192.168.10.3 255.255.255.128
-standby 30 ip 192.168.10.1
-
-int vlan 40
-ip address 192.168.10.131 255.255.255.192
-standby 40 ip 192.168.10.129
-standby 40 priority 110
-standby 40 preempt
-
-int vlan 50
-ip address 192.168.11.3 255.255.255.240
-standby 50 ip 192.168.11.1
-standby 50 priority 110
-standby 50 preempt
-
-int vlan 99
-ip address 192.168.11.19 255.255.255.240
-standby 99 ip 192.168.11.17
-standby 99 priority 110
-standby 99 preempt
-```
+Section moved to [[Spanning Tree#Implementing Load Balancing|STP]].
 
 If DUPP_ADDR occurs: shutdown interface, check ARP table on switches
 
-As for OSPF implementation.
+### OSPF implementation.
 Core:
 ```
 router ospf 1
@@ -138,16 +70,36 @@ network 10.0.0.0 0.0.0.255 area 0
 default-information originate
 ```
 
-Dist 1 & Dist 2:
+Dist 1
 ```
+int g1/1/1
+no switchport
+ip addr 10.0.0.1 255.255.255.252
 router ospf 1
-network 10.0.0.0 0.0.0.255 area 0
+network 10.0.0.0 0.0.0.3 area 0
 network 192.168.10.192 0.0.0.31 area 0 ! VLAN 10
 network 192.168.10.224 0.0.0.31 area 0 ! VLAN 20
 network 192.168.10.0 0.0.0.127 area 0  ! VLAN 30
 network 192.168.10.128 0.0.0.63 area 0 ! VLAN 40
 network 192.168.11.0 0.0.0.15 area 0   ! VLAN 50
 network 192.168.11.16 0.0.0.15 area 0  ! VLAN 99
+network 192.168.0.0 0.0.255.255 area 0
+```
+
+Dist 2
+```
+int g1/1/1
+no switchport
+ip addr 10.0.0.6 255.255.255.252
+router ospf 1
+network 10.0.0.4 0.0.0.3 area 0
+network 192.168.10.192 0.0.0.31 area 0 ! VLAN 10
+network 192.168.10.224 0.0.0.31 area 0 ! VLAN 20
+network 192.168.10.0 0.0.0.127 area 0  ! VLAN 30
+network 192.168.10.128 0.0.0.63 area 0 ! VLAN 40
+network 192.168.11.0 0.0.0.15 area 0   ! VLAN 50
+network 192.168.11.16 0.0.0.15 area 0  ! VLAN 99
+network 192.168.0.0 0.0.255.255 area 0
 ```
 
 Troubleshooting commands:
