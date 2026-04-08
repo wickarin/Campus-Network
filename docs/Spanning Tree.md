@@ -1,17 +1,13 @@
 #Proj 
-2 commands to attribute priority to Core and Dist 1 switches
-Dist1: `spanning-tree vlan 1,10,20,30,40,50,99 priority 4096`
-Dist2: `spanning-tree vlan 1,10,20,30,40,50,99 priority 8192`
-
-Core becomes Root bridge, and Dist1 becomes secondary root
 
 ### Implementing Load Balancing
-Standby configurations are not found
-STP is giving quite a lot of troubles
-Will require reconfiguration of Standy-active
+- [-] Standby configurations are not found
+- [-] STP is giving quite a lot of troubles
+- [-] Will require reconfiguration of Standy-active
 
 First set the spanning tree mode: pvst
 `spanning-tree mode pvst`
+This mode is a per-VLAN STP, this is the reason why the diagram does not display amber blocking ports. On some vlans they are blocked, but not on others.
 
 Dist1:
 ```

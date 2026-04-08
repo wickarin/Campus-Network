@@ -48,6 +48,7 @@ This added redundancy between the layers requires the implementation of either S
 - [x] [[Default Route & ACLs]]
 - [x] [[OSPF]]
 - [ ] [[Firewall Configuration]]
+- [ ] [[DNS]]
 
 ### Testing
 Troubleshooting for VLAN: `show run | section interface Vlan`
