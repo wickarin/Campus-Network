@@ -6,6 +6,7 @@ Created the following VLANs
 - vlan 40 name GUEST
 - vlan 50 name SERVERS
 - vlan 99 name MGMT
+- extra - vlan 60 WIRELESS
 
 All of these vlans have been configured onto the switches, with the exception of the server switch.
 This switch was only configured with vlans 50 and 99.
@@ -37,9 +38,10 @@ Required /23 block
 | VLAN | Name     | Nº Devices | Mask | Hosts | Subnet            | Gateway |
 | ---- | -------- | ---------- | ---- | ----- | ----------------- | ------- |
 | 10   | ADMIN    | ~30        | .224 | 30    | 192.168.10.192/27 | .193    |
-| 20   | IT       | ~20        | .224 | 30    | 192.168.10.224/27 | .225    |
+| 20   | IT       | ~25        | .224 | 30    | 192.168.10.224/27 | .225    |
 | 30   | STUDENTS | ~100       | .128 | 126   | 192.168.10.0/25   | .1      |
 | 40   | GUEST    | ~50        | .192 | 62    | 192.168.10.128/26 | .129    |
 | 50   | SERVERS  | ~10        | .240 | 14    | 192.168.11.0/28   | .1      |
 | 99   | MGMT     | ~10        | .240 | 14    | 192.168.11.16/28  | .17     |
+| 60   | WIRELESS | ~50        | .192 | 62    | 192.168.11.128/26 | .129    |
 

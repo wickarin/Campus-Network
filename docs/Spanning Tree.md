@@ -39,6 +39,12 @@ standby 50 ip 192.168.11.1
 VLAN 99
 ip address 192.168.11.18 255.255.255.240
 standby 99 ip 192.168.11.17
+
+VLAN 60
+ip address 192.168.11.130 255.255.255.192
+standby 60 ip 192.168.11.129
+standby 60 priority 110
+standby 60 preempt 
 ```
 Dist2:
 ```
@@ -72,6 +78,10 @@ ip address 192.168.11.19 255.255.255.240
 standby 99 ip 192.168.11.17
 standby 99 priority 110
 standby 99 preempt
+
+VLAN 60
+ip address 192.168.11.131 255.255.255.192
+standby 60 ip 192.168.11.129
 ```
 
 `show ip interface brief`
@@ -87,6 +97,8 @@ PC0 (VLAN 30) and PC10 (VLAN 10)
 `show spanning-tree summary`
 ![[Pasted image 20260401204806.png]]
 This the result for Dist2 switch. Analyzing this image, it shows that the STP root for MGMT vlan is Dist 2, while for HSRP Dist 1 is the active. 
-This causes a 'Tromboning' issue. 
+This causes a 'Tromboning' issue.
 Since Dist 2 is already Root for STP, just have to change it's HSRP priority to fix it.
+Updated image without the 'Tromboning' issue
+![[Pasted image 20260410054049.png]]
 

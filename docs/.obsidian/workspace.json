@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Project Adventure.md",
+                "file": "Updating Layout.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Project Adventure"
+              "title": "Updating Layout"
             }
           },
           {
@@ -27,30 +27,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DNS.md",
+                "file": "VLAN Design.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "DNS"
+              "title": "VLAN Design"
             }
           },
           {
             "id": "b5f0f660ebed5d0a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Firewall Configuration.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Firewall Configuration"
-            }
-          },
-          {
-            "id": "43f07d8f01c99499",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -62,9 +48,23 @@
               "icon": "lucide-file",
               "title": "Spanning Tree"
             }
+          },
+          {
+            "id": "07f720f07a43352c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Trunk Links.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Trunk Links"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       },
       {
         "id": "e67a218fd3164539",
@@ -246,31 +246,30 @@
       "bases:Criar nova base": false
     }
   },
-  "active": "e7d4a70d33a4a0c8",
+  "active": "07f720f07a43352c",
   "lastOpenFiles": [
+    "VLAN Design.md",
+    "Spanning Tree.md",
+    "Updating Layout.md",
+    "Trunk Links.md",
+    "Inter-Vlan Routing.md",
+    "OSPF.md",
+    "Firewall Configuration.md",
+    "README.md",
+    "Project Adventure.md",
+    "DHCP config.md",
+    "Default Route & ACLs.md",
+    "img/Pasted image 20260410054049.png",
+    "DNS.md",
     "img/Pasted image 20260408065939.png",
     "img/Pasted image 20260408065757.png",
-    "Firewall Configuration.md",
-    "DNS.md",
-    "Project Adventure.md",
-    "Spanning Tree.md",
-    "Default Route & ACLs.md",
     "img/Pasted image 20260402062520.png",
     "img/Pasted image 20260402060906.png",
-    "OSPF.md",
-    "Trunk Links.md",
     "img/Pasted image 20260401204806.png",
-    "Inter-Vlan Routing.md",
-    "DHCP config.md",
-    "VLAN Design.md",
     "img/Pasted image 20260330061021.png",
-    "README.md",
     "img/Pasted image 20260325072415.png",
     "img/Pasted image 20260320084247.png",
     "img/Pasted image 20260319072701.png",
-    "Updating Layout.md",
-    "img/Pasted image 20260325072726.png",
-    "img/Pasted image 20260325072717.png",
     "img"
   ]
 }
